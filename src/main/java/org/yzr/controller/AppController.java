@@ -28,7 +28,7 @@ public class AppController {
         try{
             List<AppViewModel> apps = this.appService.findAll();
             request.setAttribute("apps", apps);
-            request.setAttribute("baseURL", this.pathManager.getBaseURL(false));
+            request.setAttribute("baseURL", this.pathManager.getBaseURL(true));
         } catch (Exception e) {
             e.printStackTrace();
         }
